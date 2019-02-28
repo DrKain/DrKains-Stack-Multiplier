@@ -1,0 +1,11 @@
+{
+  "name": "DrKains_StackMultiplier",
+  "version": "0.17.0",
+  "factorio_version": "0.17",
+  "title": "DrKain's Stack Multiplier",
+  "author": "DrKain",
+  "contact": "drkain@outlook.com",
+  "homepage": "https://ksir.pw",
+  "description": "Multiplies the stack size of most items in the game by a set value.",
+  "dependencies": ["base >= 0.17.0"]
+}
