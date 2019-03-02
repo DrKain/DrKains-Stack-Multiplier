@@ -1,6 +1,8 @@
 -- Thanks to Noxy for the original mod, I figured it was time to update.
 
-local baseStackMultiplier = settings.startup["DrKains_StackMultiplier-basemultiplier"].value
+local baseStackMultiplier = settings.startup["DrKains_StackMultiplier-baseStackMultiplier"].value
+local constructRobotStackMultiplier = settings.startup["DrKains_StackMultiplier-constructRobotStackMultiplier"].value
+local logicRobotStackMultiplier = settings.startup["DrKains_StackMultiplier-logicRobotStackMultiplier"].value
 
 -- Changing these can crash the game...
 local ignore = {
@@ -23,3 +25,14 @@ for _, dat in pairs(data.raw) do
 		end
 	end
 end
+
+-- Construct Robots
+for _,v in pairs(data.raw["construction-robot"]) do
+	v.max_payload_size = v.max_payload_size * constructRobotStackMultiplier
+end
+
+-- Logic Robots
+for _,v in pairs(data.raw["logistic-robot"]) do
+	v.max_payload_size = v.max_payload_size * logicRobotStackMultiplier
+end
+	
