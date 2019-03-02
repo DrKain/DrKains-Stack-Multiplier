@@ -5,4 +5,6 @@ Increases the stack size for all items by a set multiplier value.
 Should work with any mods as long as the load order is correct.  
 
 
-Credit to Noxy for the original mod, But since their one was over a year old I figured I would update it myself.  
+https://mods.factorio.com/mod/DrKains_StackMultiplier
+
+Credit to Noxy for the original mod, But since their one was over a year old I figured I would update it myself.    
