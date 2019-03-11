@@ -26,6 +26,13 @@ data:extend(
 		default_value = 1,
 		maximum_value = 10000,
 		order = "a-c"
+	},
+	{
+		type = "bool-setting",
+		name = "DrKains_stackMultiplier-satelliteStacking",
+		setting_type = "startup",
+		default_value = false,
+		order = "b-a"
 	}
 }
 )

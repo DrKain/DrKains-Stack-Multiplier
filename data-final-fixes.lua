@@ -1,10 +1,17 @@
--- Thanks to Noxy for the original mod, I figured it was time to update.
+-- Please edit settings ingame unless you know what you are doing.
 
+
+
+
+-- Thanks to Noxy for the original mod, I figured it was time to update and fix some of the bugs.
 local baseStackMultiplier = settings.startup["DrKains_StackMultiplier-baseStackMultiplier"].value
 local constructRobotStackMultiplier = settings.startup["DrKains_StackMultiplier-constructRobotStackMultiplier"].value
 local logicRobotStackMultiplier = settings.startup["DrKains_StackMultiplier-logicRobotStackMultiplier"].value
+local blacklistSatellite = settings.startup["DrKains_stackMultiplier-satelliteStacking"].value
 
--- Changing these can crash the game...
+-- Changing these can crash the game or cause bugs.
+-- If you feel like one of these options should be modified, Please
+-- let me know on github.
 local ignore = {
 	["blueprint"]           = true,
 	["blueprint-book"]      = true,
@@ -15,11 +22,17 @@ local ignore = {
 	["upgrade-item"]		= true
 }
 
+-- internal name blacklists
+local blacklist = {
+	["satellite"] 			= not blacklistSatellite
+}
+
 -- loop through each item and apply the new stack size
 for _, dat in pairs(data.raw) do
 	for _,item in pairs(dat) do
 		if item.stack_size and type(item.stack_size) == "number" then
-			if not ignore[item.type] and (item.stackable == nil or item.stackable) then
+			-- Skip ignored/blacklisted items
+			if not ignore[item.type] == true and not blacklist[item.name] == true and (item.stackable == nil or item.stackable) then
 				item.stack_size = item.stack_size * baseStackMultiplier
 			end
 		end
