@@ -1,10 +1,9 @@
-# DrKain's Stack Multiplier  
+### DrKain's Stack Multiplier  
+
+[![1](https://img.shields.io/badge/Factorio%20Version-0.17.x-green)](#)
+[![2](https://img.shields.io/badge/factorio.com-DrKain's%20Stack%20Multiplier-blue)](https://mods.factorio.com/mod/DrKains_StackMultiplier)
   
-Increases the stack size for all items by a set multiplier value.    
-200 with a multiplier of 15 becomes 3000. This is hard capped by Factorio to 1 million.  
-Should work with any mods as long as the load order is correct.  
-
-
-https://mods.factorio.com/mod/DrKains_StackMultiplier
-
-Credit to Noxy for the original mod, But since their one was over a year old I figured I would update it myself.    
+- Increases item stack size by a set multiplier.   
+- Optional settings to increase logic/construction robot carry capacity.  
+- Exclude single-stack items (like satellites)  
+- Support for *most* mods  
