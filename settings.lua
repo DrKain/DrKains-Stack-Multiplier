@@ -29,7 +29,7 @@ data:extend(
 	},
 	{
 		type = "bool-setting",
-		name = "DrKains_stackMultiplier-satelliteStacking",
+		name = "DrKains_StackMultiplier-stackSingles",
 		setting_type = "startup",
 		default_value = false,
 		order = "b-a"
